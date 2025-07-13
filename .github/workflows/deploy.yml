@@ -8,6 +8,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: none  # ✅ prevents GitHub from injecting upload-artifact@v3
 
 concurrency:
   group: "pages"
@@ -24,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
           cache: 'npm'
 
       - name: Install dependencies
