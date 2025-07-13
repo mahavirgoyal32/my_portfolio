@@ -1,15 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
+import Header from '../pages/components/Header'
+import Hero from '../pages/components/Hero'
+import About from '../pages/components/About'
+import Skills from '../pages/components/Skills'
+import Projects from '../pages/components/Projects'
+import Experience from '../pages/components/Experience'
+import Contact from '../pages/components/Contact'
+import Footer from '../pages/components/Footer'
+import ScrollToTop from '../pages/components/ScrollToTop'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)

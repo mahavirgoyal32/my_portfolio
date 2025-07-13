@@ -5,56 +5,33 @@ import { useState } from 'react'
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('backend')
 
-  const skillCategories = {
-    backend: {
-      title: 'Backend Technologies',
-      icon: '⚙️',
-      skills: [
-        { name: 'Node.js', level: 90, description: 'Express.js, NestJS, RESTful APIs' },
-        { name: 'Python', level: 85, description: 'Django, FastAPI, Flask' },
-        { name: 'Java', level: 75, description: 'Spring Boot, JPA, Maven' },
-        { name: 'TypeScript', level: 88, description: 'Type-safe development' },
-        { name: 'Go', level: 70, description: 'Microservices, concurrent programming' },
-        { name: 'C++', level: 65, description: 'System programming, algorithms' }
-      ]
-    },
-    database: {
-      title: 'Database & Storage',
-      icon: '🗄️',
-      skills: [
-        { name: 'MongoDB', level: 85, description: 'NoSQL, aggregation pipelines' },
-        { name: 'PostgreSQL', level: 80, description: 'Advanced queries, optimization' },
-        { name: 'MySQL', level: 82, description: 'Database design, indexing' },
-        { name: 'Redis', level: 75, description: 'Caching, session management' },
-        { name: 'Elasticsearch', level: 70, description: 'Search engine, analytics' },
-        { name: 'AWS S3', level: 78, description: 'Object storage, CDN' }
-      ]
-    },
-    cloud: {
-      title: 'Cloud & DevOps',
-      icon: '☁️',
-      skills: [
-        { name: 'AWS', level: 82, description: 'EC2, Lambda, RDS, S3' },
-        { name: 'Docker', level: 85, description: 'Containerization, multi-stage builds' },
-        { name: 'Kubernetes', level: 70, description: 'Orchestration, scaling' },
-        { name: 'CI/CD', level: 80, description: 'GitHub Actions, Jenkins' },
-        { name: 'Linux', level: 78, description: 'System administration, scripting' },
-        { name: 'Nginx', level: 75, description: 'Reverse proxy, load balancing' }
-      ]
-    },
-    frontend: {
-      title: 'Frontend & Tools',
-      icon: '🎨',
-      skills: [
-        { name: 'React.js', level: 78, description: 'Hooks, Context API, Redux' },
-        { name: 'Next.js', level: 75, description: 'SSR, SSG, API routes' },
-        { name: 'JavaScript', level: 85, description: 'ES6+, async programming' },
-        { name: 'HTML/CSS', level: 80, description: 'Responsive design, Tailwind CSS' },
-        { name: 'Git', level: 88, description: 'Version control, branching strategies' },
-        { name: 'Postman', level: 82, description: 'API testing, automation' }
-      ]
-    }
+  const skillCategories: { [key: string]: {
+  title: string;
+  icon: string;
+  skills: { name: string; level: number; description: string }[];
+} } = {
+  backend: {
+    title: 'Backend',
+    icon: '🛠️',
+    skills: [/* ... */]
+  },
+  frontend: {
+    title: 'Frontend',
+    icon: '🎨',
+    skills: [/* ... */]
+  },
+  database: {
+    title: 'Database',
+    icon: '🗄️',
+    skills: [/* ... */]
+  },
+  cloud: {
+    title: 'Cloud',
+    icon: '☁️',
+    skills: [/* ... */]
   }
+}
+
 
   const categories = Object.keys(skillCategories)
 
